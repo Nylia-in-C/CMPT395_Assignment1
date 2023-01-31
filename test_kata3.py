@@ -50,3 +50,13 @@ class Test_pass_val:
         assert is_valid == False
         assert err_msg == "Password must contain at least one capital letter"
     
+    #8: Check for special character (True)
+    def test8(self):
+        (is_valid, err_msg) = k3.pass_val("A$1234567")
+        assert is_valid == True
+        assert err_msg == ""
+    #9: Check for special character (False)
+    def test9(self):
+        (is_valid, err_msg) = k3.pass_val("A1234567")
+        assert is_valid == False
+        assert err_msg == "Password must contain at least one special character"
