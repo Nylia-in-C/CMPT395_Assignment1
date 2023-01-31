@@ -48,3 +48,16 @@ class Test_fizzbuzz:
     def test9(self):
         str = k1.fizzbuzz(-25)
         assert str == "Buzz"
+
+    #10-12: Multiples of 3 AND 5 return "FizzBuzz"
+    def test10(self):
+        str = k1.fizzbuzz(15)
+        assert str == "FizzBuzz"
+
+    def test11(self):
+        str = k1.fizzbuzz(45)
+        assert str == "FizzBuzz"
+
+    def test12(self):
+        str = k1.fizzbuzz(-300)
+        assert str == "FizzBuzz"
