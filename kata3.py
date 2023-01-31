@@ -28,19 +28,29 @@ def pass_val(string):
         err_msg+=("Password must be at least 8 characters\n")
     
     #minimum 2 numbers
-    count = 0 #initialize num counter
+    countN = 0 #initialize num counter
     for char in string:
         if char.isdigit() == True:
-            count += 1
-    if (count >= 2):
+            countN += 1
+    if (countN >= 2):
         has_2nums = True
     else:
         has_2nums = False
         err_msg+=("The password must contain at least 2 numbers\n")
 
+    #minimum 1 capital letter
+    countU = 0
+    for char in string:
+        if char.isupper() == True:
+            countU += 1
+    if (countU >= 1):
+        has_upper = True
+    else:
+        has_upper = False
+        err_msg+=("Password must contain at least one capital letter\n")
+
     #check if all flags are true
-    if (is_min8 == True and has_2nums == True): 
-        print("TESTING")
+    if (is_min8 == True and has_2nums == True and has_upper == True): 
         is_valid = True
 
     err_msg = err_msg[0:-1] #remove final \n
