@@ -10,6 +10,7 @@ import pytest
 
 #Tests fizzbuzz to see if nums converted to str
 class Test_fizzbuzz:
+    #1-3: Check basic conversion functionality
     def test1(self):
         str = k1.fizzbuzz(1)
         assert str == "1"
@@ -22,6 +23,7 @@ class Test_fizzbuzz:
         str = k1.fizzbuzz(-534544)
         assert str == "-534544"
 
+    #4-6: Check if multiples of 3 return "Fizz" instead
     def test4(self):
         str = k1.fizzbuzz(3)
         assert str == "Fizz"
@@ -34,6 +36,7 @@ class Test_fizzbuzz:
         str = k1.fizzbuzz(-60)
         assert str == "Fizz"
 
+    #7-9: Check if multiples of 5 return "Buzz" instead
     def test7(self):
         str = k1.fizzbuzz(5)
         assert str == "Buzz"
