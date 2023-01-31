@@ -33,7 +33,7 @@ class Test_pass_val:
         assert err_msg == "The password must contain at least 2 numbers"
 
     #5: Check for multiple error messages
-    def test3(self):
+    def test5(self):
         (is_valid, err_msg) = k3.pass_val("passwd")
         assert is_valid == False
         assert err_msg == ("Password must be at least 8 characters\n"
