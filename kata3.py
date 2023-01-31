@@ -23,11 +23,14 @@ def pass_val(string):
     #count numbers and capital letters in string
     countN = 0 #initialize num counter
     countU = 0 #initialize uppercase counter
+    countS = 0 #initialize special counter
     for char in string:
         if char.isdigit() == True:
             countN += 1
         elif char.isupper() == True:
             countU += 1
+        elif char.isalnum() == False:
+            countS += 1
 
     #string length of min 8
     if len(string) >= 8: 
@@ -50,8 +53,16 @@ def pass_val(string):
         has_upper = False
         err_msg+=("Password must contain at least one capital letter\n")
 
+ #minimum 1 special character
+    if (countS >= 1):
+        has_special = True
+    else:
+        has_special = False
+        err_msg+=("Password must contain at least one special character\n")
+
     #check if all flags are true
-    if (is_min8 == True and has_2nums == True and has_upper == True): 
+    if (is_min8 == True and has_2nums == True 
+        and has_upper == True and has_special == True): 
         is_valid = True
 
     err_msg = err_msg[0:-1] #remove final \n
