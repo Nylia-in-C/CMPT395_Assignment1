@@ -33,3 +33,15 @@ class Test_fizzbuzz:
     def test6(self):
         str = k1.fizzbuzz(-60)
         assert str == "Fizz"
+
+    def test7(self):
+        str = k1.fizzbuzz(5)
+        assert str == "Buzz"
+
+    def test8(self):
+        str = k1.fizzbuzz(50)
+        assert str == "Buzz"
+
+    def test9(self):
+        str = k1.fizzbuzz(-25)
+        assert str == "Buzz"
