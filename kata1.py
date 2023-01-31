@@ -6,8 +6,13 @@
 #Program Purpose: [WIP] I'll know when the kata is done I guess?
 
 #Purpose:       Accepts a number as input and returns a string
+#               Returns "Fizz" for multiples of 3
 #Parameters:    num: integer to be converted
 #Return:        string: String representing the entered number
+#                       or "Fizz" for multiples of 3
 def fizzbuzz(num):
+    if (num % 3 == 0):
+        return "Fizz"
+
     return(str(num))
 
