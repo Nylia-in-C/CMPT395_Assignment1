@@ -8,7 +8,7 @@
 import kata1 as k1
 import pytest
 
-#Tests fizzbuzz to see if nums converted to str
+#Tests fizzbuzz (kata1) to see if nums converted to str
 class Test_fizzbuzz:
     #1-3: Check basic conversion functionality
     def test1(self):
