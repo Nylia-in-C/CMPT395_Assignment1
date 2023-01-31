@@ -10,4 +10,7 @@
 #               err_msg - string indicating why password is not valid
 
 def pass_val(string):
-    pass
+    if (len(string) < 8):
+        err_msg = "Password must be at least 8 characters"
+        return (False, err_msg)
+    return (True, "")
