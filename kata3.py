@@ -5,7 +5,7 @@
 
 #Purpose:       Validates passwords according to these specs:
 #               - At least 8 characters long
-#               - At least 2 numbers
+#               - At least 2 numbers, 1 capital letter, 1 special character
 #Parameters:    string - password to be validated
 #Return:        is_valid - Bool for password validity
 #               err_msg - string indicating why password is not valid
@@ -21,9 +21,7 @@ def pass_val(string):
     err_msg = ""
 
     #count numbers and capital letters in string
-    countN = 0 #initialize num counter
-    countU = 0 #initialize uppercase counter
-    countS = 0 #initialize special counter
+    countN = countU = countS = 0 #initialize num, UC, special counter
     for char in string:
         if char.isdigit() == True:
             countN += 1
@@ -53,7 +51,7 @@ def pass_val(string):
         has_upper = False
         err_msg+=("Password must contain at least one capital letter\n")
 
- #minimum 1 special character
+    #minimum 1 special character
     if (countS >= 1):
         has_special = True
     else:
@@ -61,8 +59,7 @@ def pass_val(string):
         err_msg+=("Password must contain at least one special character\n")
 
     #check if all flags are true
-    if (is_min8 == True and has_2nums == True 
-        and has_upper == True and has_special == True): 
+    if (is_min8 and has_2nums and has_upper and has_special): 
         is_valid = True
 
     err_msg = err_msg[0:-1] #remove final \n
