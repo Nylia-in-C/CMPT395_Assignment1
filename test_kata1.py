@@ -33,7 +33,7 @@ class Test_fizzbuzz:
         assert str == "Fizz"
 
     def test6(self):
-        str = k1.fizzbuzz(-60)
+        str = k1.fizzbuzz(-63)
         assert str == "Fizz"
 
     #7-9: Check if multiples of 5 return "Buzz" instead
