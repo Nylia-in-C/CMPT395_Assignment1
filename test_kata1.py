@@ -8,15 +8,16 @@
 import kata1 as k1
 import pytest
 
-class Test_num2str:
+#Tests fizzbuzz to see if nums converted to str
+class Test_fizzbuzz:
     def test1(self):
-        str = k1.num2str(1)
+        str = k1.fizzbuzz(1)
         assert str == "1"
 
     def test2(self):
-        str = k1.num2str(10)
+        str = k1.fizzbuzz(10)
         assert str == "10"
 
     def test3(self):
-        str = k1.num2str(-534544)
+        str = k1.fizzbuzz(-534544)
         assert str == "-534544"
