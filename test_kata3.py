@@ -19,4 +19,14 @@ class Test_pass_val:
     def test2(self):
         (is_valid, err_msg) = k3.pass_val("123456")
         assert is_valid == False
-        assert err_msg == "Password must be at least 8 characters"    
+        assert err_msg == "Password must be at least 8 characters"
+    #3: Check for minimum 2 numbers (True)
+    def test3(self):
+        (is_valid, err_msg) = k3.pass_val("12345678")
+        assert is_valid == True
+        assert err_msg == ""    
+    #3: Check for minimum 2 numbers (False)
+    def test4(self):
+        (is_valid, err_msg) = k3.pass_val("abcdefghijklm1")
+        assert is_valid == False
+        assert err_msg == "The password must contain at least 2 numbers"    
