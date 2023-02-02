@@ -21,3 +21,9 @@ def fizzbuzz(num):
         return "Buzz"
     return(str(num))
 
+#verbose print testing
+if __name__ == "__main__":
+    inputs = [1, 8, -5344, 3, 999, -63, 5, 50, -25, 15, 45, -300]
+
+    for num in inputs:
+        print("Input: \t", num, "\tOutput: ", fizzbuzz(num))

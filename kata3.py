@@ -64,3 +64,20 @@ def pass_val(string):
 
     err_msg = err_msg[0:-1] #remove final \n
     return (is_valid, err_msg)
+
+#verbose print testing
+if __name__ == "__main__":
+    inputs = [  "A12345678$",
+                "A1234$",
+                "A12345678$",
+                "Abcdefgjklm1$",
+                "pAsswd$",
+                "A1234567$",
+                "a1234567$",
+                "A$1234567",
+                "A1234567"
+            ]
+
+    for pswd in inputs:
+        print("Input: \t", pswd, "\tOutput: ", pass_val(pswd))
+
