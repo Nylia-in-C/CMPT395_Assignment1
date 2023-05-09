@@ -1,8 +1,7 @@
-# CMPT395_Assignment1
-Selena Weber, 3126501  
-CMPT395 AS02  
+# Introduction to Software Engineering Assignment
+Selena Weber 
 
-Repository for the first CMPT 395 Assignment.  
+Repository for the first Assignment.  
 kata1: FizzBuzz exercise  
 kata3: Password Validator exercise  
   
